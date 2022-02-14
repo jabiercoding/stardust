@@ -23,7 +23,7 @@ import java.util.Map;
 public class Trace<T> implements IMutableTrace<T> {
 
     /** Holds the success state of this trace */
-    private final boolean successful;
+    private boolean successful;
 
     /** Holds the spectra this trace belongs to */
     private final ISpectra<T> spectra;
@@ -51,6 +51,14 @@ public class Trace<T> implements IMutableTrace<T> {
     @Override
     public boolean isSuccessful() {
         return this.successful;
+    }
+    
+    /**
+     * Set the successful value of the trace
+     * @param successful
+     */
+    public void setSuccessful(Boolean successful) {
+    	this.successful = successful;
     }
 
     /** {@inheritDoc} */
